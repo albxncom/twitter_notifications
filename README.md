@@ -3,6 +3,10 @@ This script is made for the "Today Scripts" OS X widget by SamRothCA. It shows y
 
 [Get the Today Scripts widget for OS X](https://github.com/SamRothCA/Today-Scripts)
 
+Here's a screenshot:
+
+![alt tag](https://raw.githubusercontent.com/albxncom/twitter_notifications/master/screenshot.png)
+
 # Usage
 1. Set your Twitter name and password in the login.php file
 2. Open your Terminal, move to the twitter_notifications directory `cd path/to/twitter_notifications`
