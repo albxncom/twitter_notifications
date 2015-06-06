@@ -18,11 +18,13 @@ for($i=0;$i<5;$i++){
 	$tweet = $tweets[$i];
 	$patt_1 = array(
 		0=>"/\s+/",
-		1=>"/@ .*/"
+		1=>"/@ .*/",
+		2=>"/\&#39;/"
 	);
 	$repl_1 = array(
 		0=>" ",
-		1=>""
+		1=>"",
+		2=>"'"
 	);
 
 	//tweet header (who, did what)
