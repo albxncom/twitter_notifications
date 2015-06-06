@@ -28,9 +28,7 @@ for($i=0;$i<5;$i++){
 	//tweet header (who, did what)
 	$tweetheader = trim(preg_replace($patt, $repl, $tweet->find(".user-info")[0]->plaintext));
 	
-	//splits name + action into 2 parts to colorize it
-	preg_match("/(.*)(|followed|favorited|retweeted)/s", $tweetheader, $matches);
-	echo "\e[0;34m\e[1m".$matches[1]."\e[0m " . $matches[2];
+	echo "\e[0;34m\e[1m".$tweetheader."\e[0m";
 
  	echo "\n";
 
