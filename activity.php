@@ -16,24 +16,32 @@ $tweets = $html->find("div.timeline table");
 
 for($i=0;$i<5;$i++){
 	$tweet = $tweets[$i];
-	$patt = array(
+	$patt_1 = array(
 		0=>"/\s+/",
 		1=>"/@ .*/"
 	);
-	$repl = array(
+	$repl_1 = array(
 		0=>" ",
 		1=>""
 	);
 
 	//tweet header (who, did what)
-	$tweetheader = trim(preg_replace($patt, $repl, $tweet->find(".user-info")[0]->plaintext));
-	
+	$tweetheader = html_entity_decode(trim(preg_replace($patt_1, $repl_1, $tweet->find(".user-info")[0]->plaintext)));
 	echo "\e[0;34m\e[1m".$tweetheader."\e[0m";
 
  	echo "\n";
 
+ 	$patt_2 = array(
+		0=>"/\s+/",
+		1=>"/\&#39;/"
+	);
+	$repl_2 = array(
+		0=>" ",
+		1=>"'"
+	);
+
  	//tweet content 
-	echo trim(preg_replace("/\s+/", " ", $tweet->find(".tweet-container")[0]->plaintext));
+	echo html_entity_decode(trim(preg_replace($patt_2, $repl_2, $tweet->find(".tweet-container")[0]->plaintext)));
 
 	echo "\n\n";
 }
