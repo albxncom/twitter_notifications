@@ -19,3 +19,6 @@ php -f activity.php
 ```
 
 Make sure to check the "Run automatically" option and you're good to go!
+
+# If it suddenly stops working
+It's most likely because your session is over. Do step #3 again to get a new session. 
