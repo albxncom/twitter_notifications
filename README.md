@@ -13,4 +13,5 @@ This script is made for the "Today Scripts" OS X widget by SamRothCA. It shows y
 cd path/to/twitter_notifications
 php -f activity.php
 ```
-6. Check the "Run automatically" option and you're good to go!
+
+Make sure to check the "Run automatically" option and you're good to go!
